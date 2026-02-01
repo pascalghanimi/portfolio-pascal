@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6881e7ccb8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <a href="#editing">Editing</a>
+      <a href="#computer-science">Computer Science</a>
+      <a href="#sports-science">Sports Science</a>
+    </nav>
+    <header>
+      <div id="heading">
+        <h1 class="heading">Pascal Ghanimi</h1>
+        <p class="subheading">Sports & Computer Science</p>
+      </div>
+      <img src="images/stones.png" alt="" id="stones" />
+      <img src="images/person.png" alt="" id="person" />
+      <img src="images/mountains.png" alt="" id="mountains" />
+      <img src="images/background.png" alt="" id="background" />
+      <canvas id="canvas"></canvas>
+    </header>
+    <main>
+      <div id="skills"></div>
+      <div id="editing">
+        <h2 class="section-dark-heading">Editing</h2>
+        <p class="section-dark-subheading">
+          Cinematic Cuts, Clean Storytelling
+        </p>
+        <p class="section-dark-info">
+          Edited content for channels with 600k+ subscribers and videos with 30+
+          million views. Experienced with Adobe Premiere Pro, After Effects,
+          Photoshop and DaVinci Resolve.
+        </p>
+        <div id="editing-video-container">
+          <!--Card One-->
+          <div class="video-card">
+            <img
+              src="images/thumbnail-nadine.jpg"
+              alt=""
+              class="video-preview-img"
+            />
+            <h3 class="video-title">Home Workout</h3>
+            <p class="video-info">Simple home workout for women.</p>
+            <a
+              target="_blank"
+              href="https://youtu.be/mJIcxqUgPG8"
+              class="video-link"
+              >Watch Video <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <!--Card Two-->
+          <div class="video-card">
+            <img
+              src="images/thumbnail-lech.jpg"
+              alt=""
+              class="video-preview-img"
+            />
+            <h3 class="video-title">Lech Media Summit</h3>
+            <p class="video-info">Study trip edit from the Lech Media Summit</p>
+            <a
+              target="_blank"
+              href="https://youtu.be/aTYC97CLHYA"
+              class="video-link"
+              >Watch Video <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div id="computer-science">
+        <h2 class="section-light-heading">Computer Science</h2>
+        <p class="section-light-subheading">Building digital stuff</p>
+        <p class="section-light-info">
+          Full-stack web and app development, from frontend to backend, using
+          modern frameworks and databases.
+        </p>
+        <div class="ability-cards-container">
+          <!--Card One-->
+          <div class="ability-card blue">
+            <h3 class="ability-heading">Web Development</h3>
+            <div class="skills-container">
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">HTML, CSS & JavaScript.</p>
+              </div>
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">SQL & PHP</p>
+              </div>
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">React & Firebase</p>
+              </div>
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">MongoDB, Express, NodeJS</p>
+              </div>
+            </div>
+          </div>
+
+          <!--Card One-->
+          <div class="ability-card yellow">
+            <h3 class="ability-heading">Artificial Intelligence</h3>
+            <div class="skills-container">
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">Python</p>
+              </div>
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">PyTorch</p>
+              </div>
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">NumPy, Pandas & skikit-learn</p>
+              </div>
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">ML & DL Methods</p>
+              </div>
+            </div>
+          </div>
+
+          <!--Card One-->
+          <div class="ability-card green">
+            <h3 class="ability-heading">App Development</h3>
+            <div class="skills-container">
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">React Native & Firebase</p>
+              </div>
+              <div class="skill-container">
+                <i class="fa-solid fa-check check"></i>
+                <p class="skill-info">iOS & Android App Dev</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sports-science">
+        <h2 class="section-dark-heading">Sports Science</h2>
+        <p class="section-dark-subheading">
+          Analysis of Movement & Body Parameters
+        </p>
+        <p class="section-dark-info">
+          Movement, performance and load analysis to improve training, recovery
+          and overall performance.
+        </p>
+        <div class="sports-container">
+          <div class="sports-icon-container">
+            <img class="sports-img" src="images/sports-one.png" alt="" />
+            <p class="sports-info">Movement Analysis</p>
+          </div>
+          <div class="sports-icon-container">
+            <img class="sports-img" src="images/sports-two.png" alt="" />
+            <p class="sports-info">Body Composition</p>
+          </div>
+          <div class="sports-icon-container">
+            <img class="sports-img" src="images/sports-three.png" alt="" />
+            <p class="sports-info">Training Optimization</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/pascalghanimi" target="_blank">GitHub</a>
+      <a href="https://youtu.be/lOl7ZVGo2o0" target="_blank">Master Thesis</a>
+      <a href="https://youtu.be/_4HTvPwJQ68" target="_blank">Bachelor Thesis</a>
+    </footer>
+  </body>
+</html>

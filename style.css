@@ -1,0 +1,381 @@
+:root {
+  --dark-bg: linear-gradient(to bottom, #161722, #13151f);
+  --bright-bg: linear-gradient(to bottom, #fdfdfd, #f7f9fa);
+  --light-blue: #76849e;
+  --light-black: #202839;
+  --light-gray: #d3d7e0;
+  --link-color: #759fbf;
+  --green-text: #d0efcd;
+  --card-bg: linear-gradient(to bottom, #1b1e29, #13151f);
+  --ability-card-bg:
+    radial-gradient(
+      120px 120px at 20% 15%,
+      rgba(100, 150, 210, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      180px 180px at 80% 85%,
+      rgba(180, 210, 245, 0.18),
+      transparent 65%
+    ),
+    linear-gradient(180deg, #fbfcfe 0%, #f2f5fa 100%);
+  --border-color: #282b37;
+  --ability-card-bg-yellow:
+    radial-gradient(
+      120px 120px at 20% 15%,
+      rgba(210, 190, 140, 0.06),
+      transparent 65%
+    ),
+    radial-gradient(
+      180px 180px at 80% 85%,
+      rgba(235, 220, 190, 0.1),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f8f7f4 100%);
+  --ability-card-bg-green:
+    radial-gradient(
+      140px 140px at 18% 18%,
+      rgba(120, 190, 155, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      220px 220px at 85% 90%,
+      rgba(170, 220, 200, 0.18),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f3faf7 100%);
+
+  --border-color: #282b37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serifs;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#background {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  margin: auto;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+#heading {
+  position: absolute;
+  bottom: 55%;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 2;
+  text-align: center;
+}
+
+.heading {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.subheading {
+  color: var(--light-gray);
+  text-align: center;
+}
+
+#mountains {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  margin: auto;
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+}
+
+#person {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#stones {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  z-index: 6;
+  width: 100%;
+  object-fit: cover;
+}
+
+#canvas {
+  mix-blend-mode: screen;
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+}
+
+#editing {
+  background: var(--dark-bg);
+  padding: 60px 40px 100px 40px;
+}
+
+#editing-video-container {
+  width: 80%;
+  margin: 60px auto 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.section-dark-heading {
+  color: white;
+  text-align: center;
+}
+
+.section-dark-subheading {
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.section-dark-info {
+  margin-top: 30px;
+  color: var(--light-gray);
+  text-align: center;
+}
+
+.video-card {
+  padding: 40px;
+  background: var(--card-bg);
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.video-preview-img {
+  width: 100%;
+  border-radius: 15px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-title {
+  color: white;
+  margin-top: 40px;
+}
+
+.video-info {
+  color: var(--light-gray);
+  margin-top: 15px;
+}
+
+.video-info::after {
+  content: "";
+  display: block;
+  border: 2px solid var(--link-color);
+  width: 45px;
+  margin-top: 10px;
+}
+
+.video-link {
+  color: var(--link-color);
+  text-decoration: none;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#computer-science {
+  background: var(--bright-bg);
+  padding: 60px 40px 100px 40px;
+}
+
+.section-light-heading {
+  text-align: center;
+  color: var(--light-blue);
+}
+
+.section-light-subheading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 30px;
+  color: var(--light-black);
+}
+
+.section-light-info {
+  margin-top: 30px;
+  color: var(--light-black);
+  text-align: center;
+}
+
+.ability-cards-container {
+  width: 80%;
+  margin: 60px auto 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.skills-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ability-card {
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blue {
+  background: var(--ability-card-bg);
+}
+
+.yellow {
+  background: var(--ability-card-bg-yellow);
+}
+
+.green {
+  background: var(--ability-card-bg-green);
+}
+
+.skill-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ability-heading {
+  color: var(--light-black);
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.check {
+  color: var(--light-blue);
+}
+
+.skill-info {
+  columns: var(--light-black);
+}
+
+#sports-science {
+  background: var(--dark-bg);
+  padding: 60px 40px 100px 40px;
+}
+
+.sports-info {
+  color: var(--green-text);
+  margin-top: 10px;
+}
+
+.sports-container {
+  width: 80%;
+  margin: 60px auto 0 auto;
+  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.sports-icon-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sports-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+footer {
+  padding: 20px 80px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--light-blue);
+}
+
+@media screen and (max-width: 700px) {
+  .heading {
+    font-size: 1.7rem;
+  }
+
+  .subheading {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .subheading {
+    font-size: 0.8rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+}
