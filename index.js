@@ -5,6 +5,34 @@ const mountains = document.getElementById("mountains");
 const background = document.getElementById("background");
 const heading = document.getElementById("heading");
 
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  const imgs = Array.from(document.images);
+
+  if (imgs.length === 0) {
+    loader?.remove();
+    return;
+  }
+
+  let loaded = 0;
+
+  const done = () => {
+    loaded += 1;
+    if (loaded >= imgs.length) {
+      loader?.remove();
+    }
+  };
+
+  imgs.forEach((img) => {
+    if (img.complete) {
+      done();
+    } else {
+      img.addEventListener("load", done, { once: true });
+      img.addEventListener("error", done, { once: true });
+    }
+  });
+});
+
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   stones.style.transform = `translateY(${scrollY}px)`;
@@ -50,8 +78,13 @@ class Circle {
 
   update() {
     if (this.x + this.r >= canvas.width || this.x < this.r) {
-      this.x = Math.random() * canvas.width * 0.6;
-      this.y = -Math.random() * canvas.height * 0.2;
+      if (canvas.width < 800) {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+      } else {
+        this.x = Math.random() * canvas.width * 0.6;
+        this.y = -Math.random() * canvas.height * 0.2;
+      }
     }
 
     if (this.y > canvas.height - this.r) {
