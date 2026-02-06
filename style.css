@@ -409,6 +409,21 @@ footer a {
   z-index: 9999;
 }
 
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.link-demo {
+  color: var(--link-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 #loader-bar {
   width: 64px;
   height: 64px;
